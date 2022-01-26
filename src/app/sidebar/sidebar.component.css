@@ -1,0 +1,106 @@
+.sidebar-container{
+    background-color: #283046;
+    width: 260px;
+    color: var(--text);
+    padding: 15px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; 
+}
+.home-dropdown{
+    background-color: #161d31;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    border-radius: 7px;
+}
+.home-dropdown p{
+    margin-left: 10px;
+    font-size: 15px;
+}
+.home-dropdown-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-dropdown-item-count{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 1px;
+    font-size: 13px;
+    background-color: rgba(255, 159, 67, .1);  
+
+    color: var(--orange);
+    font-weight: 700;
+    text-align: center;
+}
+.categories ul li{
+    list-style: none;
+}
+.home-dropdown-right-arrow{
+    margin-left: 10px;
+    opacity: .6;
+    font-size: 12px;
+}
+.category-one, .category-two{
+    padding: 10px;
+}
+.category-text{
+    color: var(--text);
+    opacity: 0.4;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin: 18px 0;
+}
+.category-one,.category-two > ul{
+    list-style: none;
+}
+.category-one,.category-two ul li{
+    margin-top: 10px;  
+}
+.li-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media(max-width:1100px){
+    .sidebar-container{
+        display: none;
+    }
+}
+.sidebar-list-item{
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    justify-content: space-between;
+}
+.li-rechts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.li-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #9da0a5;
+}
+.new-li-sidebar{
+    display: flex;
+    padding: 3px 8px;
+    color: #28c76f ;
+    background-color: rgba(40,199,111,.12);
+    border: none;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+.icon-list{
+    margin-right: 15px;
+    font-size: 20px;
+}
+.list-rightsided{
+    display: flex;
+}

@@ -1,0 +1,29 @@
+<div class="toolbar-container">
+    <div class="icons-toolbar-left">
+        <span class="iconify" data-icon="feather:calendar"></span>
+        <span class="iconify" data-icon="feather:message-square"></span>
+        <span class="iconify" data-icon="feather:mail"></span>
+        <span class="iconify" data-icon="feather:check-square"></span>
+        <span class="iconify star-icon" data-icon="feather:star"></span>
+    </div>
+    <div class="hamburger-menu-toolbar">
+        <span class="iconify" data-icon="charm:menu-hamburger"></span>
+    </div>
+    <div class="icons-toolbar right">
+
+        <div class="toolbar-icon">
+            <span class="iconify" data-icon="feather:search"></span>
+
+            <div class="toolbar-icon" (click)="toggleShoppingCart()">
+                <span class="iconify shopping-cart-badge" data-icon="feather:shopping-cart"></span>
+                <span *ngIf="totalCartItemNumber > 0" class="toolbarIconBadge">{{ totalCartItemNumber }}</span>
+            </div>
+            <div class="toolbar-icon">
+                <span class="iconify" data-icon="feather:bell"></span>
+            </div>
+            <div class="user-name">
+                <h4>Username</h4>
+                <p>admin</p>
+            </div>
+        </div>
+    </div>

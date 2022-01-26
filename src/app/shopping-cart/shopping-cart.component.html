@@ -1,0 +1,37 @@
+<div *ngIf="cartVisibility" class="cart-container">
+    <div class="cart-header">
+        <h2>My Cart</h2>
+        <div class="items-box">{{ totalCartItemNumber }} items</div>
+    </div>
+    <div *ngFor="let shoppingCartItem of shoppingCartItems">
+        <div class="cart-item" (mouseenter)="setRemoveCrossVisibility(true, shoppingCartItem)"
+            (mouseleave)="setRemoveCrossVisibility(false, shoppingCartItem)">
+            <div class="item-number">
+                <p>{{ shoppingCartItem.name | titlecase }}</p>
+            </div>
+            <div class="item-counting">
+                <div class="item-counter">
+                    <button class="item-minus" (click)="handleCounterChange(-1, shoppingCartItem)"><span class="iconify"
+                            data-icon="bx:bx-minus"></span></button>
+                    <div class="current-item-number">
+                        <span class="left-border"></span><input type="number" class="num"
+                            [(ngModel)]="shoppingCartItem.count" /><span class="right-border"></span>
+                    </div>
+                    <button class="item-plus" (click)="handleCounterChange(+1, shoppingCartItem)"><span class="iconify"
+                            data-icon="ant-design:plus-outlined"></span></button>
+                </div>
+                <div class="item-price">{{ (shoppingCartItem.count * shoppingCartItem.price) | customCurrency }}</div>
+                <button *ngIf="getRemoveCrossVisibility(shoppingCartItem)"
+                    (click)="removeShoppingCartItem(shoppingCartItem)" class="btn-remove-item"><span class="iconify"
+                        data-icon="feather:x"></span></button>
+            </div>
+        </div>
+    </div>
+    <div class="cart-total">
+        <div class="total-amount">
+            <div class="total-text">Total:</div>
+            <div class="total-combined">{{ totalPrice | customCurrency }}</div>
+        </div>
+        <button class="total-checkput" (click)="removeAllShoppingCartItems()">Checkout</button>
+    </div>
+</div>

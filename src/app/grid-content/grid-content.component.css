@@ -1,0 +1,202 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 0.33fr 0.33fr 0.33fr 1fr;
+    grid-template-rows: 1.8fr 4.6fr 3.5fr 4.4fr 7fr;
+    gap: 22px;
+    height: 100vh;
+    padding: 15px 20px 0 20px;
+    grid-template-areas:   "toolbar toolbar toolbar toolbar"
+                            "two two  three three"
+                            "four five seven seven"
+                            "six six seven seven"
+                            "eight eight eight nine";
+}
+#one{
+    grid-area: toolbar;
+}
+#two{
+    grid-area: two;
+}
+#three{
+    grid-area: three;
+}
+#four{
+    grid-area: four;
+}
+#five{
+    grid-area: five;
+}
+#six{
+    grid-area: six;
+}
+#seven{
+    grid-area: seven;
+}
+#eight{
+    grid-area: eight;
+}
+#nine{
+    grid-area: nine;
+}
+.grid-item{
+    background-color: var(--foreground);
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+    color: var(--text);
+}
+.grid-item-centered-text{
+    position: relative;
+}
+/* Tablet-Size */
+@media (max-width:1100px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr 1fr;
+        grid-template-rows: 1fr 4fr 4.1fr 3fr 6.7fr;
+        gap: 20px;
+        height: 100vh;
+        padding: 15px 20px 0 20px;
+        grid-template-areas:    "toolbar toolbar toolbar"
+                                "two two three"
+                                "four five six"
+                                "seven seven seven"
+                                "eight eight nine";
+    }
+    .img-info-item{
+        display: flex;
+    }
+    .image-infos-grid-three-item{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width:600px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr;
+        grid-template-rows: 1fr 3fr 6.3fr 2.2fr 2.8fr 1.8fr 4.5fr;
+        gap: 20px;
+        padding: 15px 20px 0 20px;
+         grid-template-areas:    "toolbar toolbar"
+                                "two two"
+                                "three three"
+                                "four five"
+                                "six six"
+                                "seven seven"
+                                "eight eight";
+                                height: 100%;    
+    }
+    #nine{
+        display: none;
+    }
+    .image-infos-grid-three-item{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+     }
+
+     .centered-text span:last-of-type{
+       display: block;
+    }
+}
+.grid-item-two{
+    padding: 15px;
+    color: var(--text);
+}
+.grid-item-two h3{
+    font-size: 18px;
+    font-weight: 500;
+}
+.grid-item-two p{
+    font-size: 14px;
+    opacity: 0.7;
+    margin-top: 20px;
+    line-height: 1.6em;
+}
+/*Grip Three Item - Img + Info*/
+.grid-three-item{
+    display: flex;
+    flex-direction: column;
+}
+.img-text{
+    color: var(--text);
+}
+
+.img-text h4{
+    color: var(--text);
+    font-weight: 700;
+}
+.img-text p{
+    color: var(--text);
+    font-size: 13px;
+    opacity: 0.8;
+}
+.centered-text{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 500;
+}
+.centered-text{
+    position: relative;
+}
+.upper-infos-grid-three-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+.upper-infos-grid-three-item p{
+    color: var(--text);
+    font-size: 13px;
+    opacity: 0.7;
+}
+.upper-infos-grid-three-item h3{
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 500;
+}
+.image-infos-grid-three-item{
+    display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.img-info-item{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.circle-img{
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px;
+    line-height: 30px;
+    margin: 20px;
+    font-size: 14px;
+}
+.circle-one{
+    background-color:  rgb(255,255,255,.12);
+    color:#b2c0c3;
+}
+.circle-two{
+    background-color:  rgba(0,207,232,.12);
+    color:#00cfe8;
+}
+.circle-three{
+    background-color:  rgba(234,84,85,.12);
+    color:#ea5455;
+}
+.circle-four{
+    background-color:  rgba(40,199,111,.12);
+    color:#28c76f;
+}

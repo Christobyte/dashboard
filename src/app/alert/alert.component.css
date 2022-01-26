@@ -1,0 +1,23 @@
+.alert-box{
+    position: absolute;
+    top: 30vh;
+    left: 20vw;
+    width: 30vw;
+    padding: 15px;
+    z-index: 100;
+    background-color: var(--foreground);
+    box-shadow: 5px 10px 18px var(--background);
+    color: var(--text);
+}
+
+.alert-box-actions{
+    text-align: right;
+}
+
+.alert-button-close{
+    background-color: var(--purple);
+    color: var(--text);
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
